@@ -100,14 +100,14 @@ function App() {
       <div>
         {currentAccount ? createOfferButton() : connectWalletButton()}
         <Formik
-        initialValues={{offerName: ""}}
+        initialValues={{name: ""}}
         onSubmit={async (values) => {
           await new Promise((resolve) => setTimeout(resolve, 500));
           alert(JSON.stringify(values, null, 2));
         }}
       >
         <Form>
-          <Field offerName="offerName" type="text" />
+          <Field name="offerName" type="text" />
           <button type="submit">Submit</button>
         </Form>
       </Formik>
